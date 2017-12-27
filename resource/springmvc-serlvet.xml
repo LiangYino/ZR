@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd
 	">
-	<!-- <context:component-scan base-package="cn.wisdomhotel.controller" /> -->
+	<context:component-scan base-package="cn.wisdomhotel.controller" />
 	<mvc:annotation-driven/>
 	<mvc:resources location="/statics/" mapping="/statics/**" />
 	<bean

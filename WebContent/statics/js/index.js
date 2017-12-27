@@ -1,0 +1,23 @@
+$(function(){
+	$("input[type=button]").click(function(){
+		$.ajax({
+			url:"checkuser",
+			type:"post",
+			data:{
+				"id":$("#id").val(),
+				//format:"json"
+			},
+			dataype:"JSON",
+			success:function(data){
+				if(data == "true"){
+					alert("用户存在");
+				}else{
+					alert("用户不存在");
+				}
+			},
+			error:function(){
+				alert("失败");
+			}
+		});
+	});
+});
