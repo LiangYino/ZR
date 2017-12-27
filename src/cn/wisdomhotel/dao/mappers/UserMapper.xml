@@ -1,0 +1,10 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0///EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wisdomhotel.dao.UserDao">
+	<select id="getUserById" resultType="User">
+		SELECT id,groupId,name,mac,status,version,sex,roomStatus,online,connectTime,disconectTime,roomStart,roomEnd,userName,voice,openTime,closeTime,type,proid,ip,housetype,idcard,prodid
+		FROM user
+		WHERE id=#{id}
+	</select>
+</mapper>

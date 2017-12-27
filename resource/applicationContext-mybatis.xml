@@ -26,12 +26,12 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:mybatis-config.xml" />
-		<!-- <property name="mapperLocations" value="classpath:cn/wisdomhotel/dao/mappers/*.xml"/> -->
+		<property name="mapperLocations" value="classpath:cn/wisdomhotel/dao/mappers/*.xml"/>
 	</bean>
-	<!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="cn.wisdomhotel.dao" />
 	</bean>
-	<context:component-scan base-package="cn.wisdomhotel.service" /> -->
+	<context:component-scan base-package="cn.wisdomhotel.service" />
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>

@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello world!</h1>
+	<h3>输入用户id验证用户是否存在</h3>
+	<input type="text" name="id" id="id" />
+	<input type="button" value="验证"/>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/index.js"></script>
 </body>
 </html>
