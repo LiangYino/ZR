@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import cn.wisdomhotel.dao.UserDao;
+import cn.wisdomhotel.pojo.User;
 import cn.wisdomhotel.service.UserService;
 
 @Service("userService")
@@ -13,7 +14,9 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 
 	public boolean UserIsExist(Integer id) {
-		if(userDao.getUserById(id) != null)
+		User user = userDao.getUserById(id);
+		System.out.println(user);
+		if(user != null)
 			return true;
 		return false;
 	}
