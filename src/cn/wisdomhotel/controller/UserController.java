@@ -18,7 +18,6 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping("/checkuser")
 	public String checkUser(Integer id) {
-		boolean isExist = userService.UserIsExist(id);
-		return JSON.toJSONString(isExist);
+		return JSON.toJSONString(userService.UserIsExist(id));
 	}
 }
