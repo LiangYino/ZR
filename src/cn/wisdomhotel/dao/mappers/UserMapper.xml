@@ -7,4 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0///EN"
 		FROM user
 		WHERE id=#{id}
 	</select>
+	<select id="getUserList" resultType="User">
+		SELECT * FROM user
+	</select>
 </mapper>

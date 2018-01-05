@@ -18,6 +18,7 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping("/checkuser")
 	public String checkUser(Integer id) {
-		return JSON.toJSONString(userService.UserIsExist(id));
+		System.out.println("========" + userService.getUserList().size());
+		return JSON.toJSONString(userService.getUserList());
 	}
 }
